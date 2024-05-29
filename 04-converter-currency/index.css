@@ -75,3 +75,23 @@ a {
   align-self: flex-end;
   height: 100px;
 }
+
+@media (max-width: 520px) {
+  .converter {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'title'
+      'subtitle'
+      'list'
+      'link'
+      'img'
+      'info';
+    gap: 20px;
+  }
+  .converter__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
