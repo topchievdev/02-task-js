@@ -1,0 +1,64 @@
+body {
+  font-family: Montserrat, sans-serif;
+  background: radial-gradient(circle at center, #141f2c, #070a0e);
+  margin: 20px 20px 80px 20px;
+  height: 300vh;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #f0f0f0;
+  transition: 0.1s ease-out;
+
+  &:hover {
+    background: #134d98;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  &--fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+.button__arrow {
+  display: block;
+  background-image: url(arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  height: 100%;
+  width: 100%;
+
+  &--go-down {
+    transform: rotate(90deg);
+  }
+
+  &--go-up {
+    transform: rotate(-90deg);
+  }
+}
+
+.additional-message {
+  position: absolute;
+  top: 50vh;
+}

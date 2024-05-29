@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <form class="form" id="form" action="/submit" method="post">
+      <h3 class="form__title">Contact Information</h3>
+      <div class="form__wrapper">
+        <label class="form__label" for="fullname">FIO</label>
+        <input
+          data-required="true"
+          data-only-letters="true"
+          class="form__input"
+          id="fullname"
+          name="fullname"
+          type="text"
+          placeholder="For Example Doe"
+        />
+      </div>
+      <div class="form__wrapper">
+        <label class="form__label" for="password">Your password</label>
+        <input
+          data-required="true"
+          data-min-length="6"
+          data-max-length="50"
+          data-forbidden-chars="true"
+          data-special-chars
+          class="form__input"
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Enter the password"
+        />
+      </div>
+      <button class="form__button" type="submit">Continue</button>
+    </form>
+  </body>
+</html>
